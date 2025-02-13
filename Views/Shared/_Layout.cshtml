@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body style="background-image: url('/Images/Background/elegant-white-bckg.jpg')">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid" style="align-items:flex-start;align-content:flex-start">
+                <div style="display:inline-block;float:left;margin-right:20px">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="~/Images/belpost_logo.png" style="background-color:#00a6fb;border-radius:25px;padding:8px" />
+                        <span style="font-size:32px;position:relative;top:15px;left:5px">
+                            Справочник Могилёвского филиала
+                        </span>
+                    </a>
+                </div>
+                <div style="display:inline-block;float:right">
+                    <a class="navbar-brand" onclick="ShowWhatsNew()" href="javascript:void(0);">
+                        <span style="font-size:24px;position:relative;top:30px;right:15px">
+                            Что нового?
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div class="whatsNewBlock" hidden>
+        <button class="roundClose" onclick="HideWhatsNew()">
+            <img src="/Images/close.png" width="20" height="20" alt="X">
+        </button>
+        <div class="updateBlock">
+            <p class="verionNum">Обновление 1.9 (11.07.2024)</p>
+            <ul>
+                <li>Добавлена возможность глобального поиска по ОПС (индекс, адрес и т.д.)</li>
+                <li>Кэширование большего количества элементов, теперь страницы будут загружаться ещё быстрее</li>
+                <li>Добавлены визуальные элементы для облегчённой навигации по сайту</li>
+            </ul>
+        </div>
+        <div class="updateBlock">
+            <p class="verionNum">Обновление 1.8 (25.03.2024)</p>
+            <ul>
+                <li>Возможность просмотра подробной информации по ОПС</li>
+                <li>Исправление ошибок вывода телефонов без указания отделения/подразделения</li>
+            </ul>
+        </div>
+        <div class="updateBlock">
+            <p class="verionNum">Обновление 1.7 (28.02.2024)</p>
+            <ul>
+                <li>Исправлена ошибка с отображением сотрудников головного управления</li>
+                <li>Сотрудники руководящего аппарата при РУПС теперь отображаются не во вкладке, а на основной странице</li>
+                <li>Изменения визуального дизайна: элементы в соответствии с требованиями СМК</li>
+                <li>Добавлена анимация элементов управления</li>
+            </ul>
+        </div>
+        <div class="updateBlock">
+            <p class="verionNum">Обновление 1.6 (22.02.2024)</p>
+            <ul>
+                <li>Переделана навигация по сайту - теперь вместо 2-ух вкладок поиска одна панель</li>
+                <li>Улучшен алгоритм поиска номеров - теперь при вводе подразделения или отделения также выводятся все его составляющие</li>
+            </ul>
+        </div>
+        <div class="updateBlock">
+            <p class="verionNum">Обновление 1.5 (16.02.2024)</p>
+            <ul>
+                <li>Сервер приложения полностью перенесен с тестовой на релизную аппаратуру</li>
+                <li>Добавлена возможность фильтрованного поиска по полям</li>
+                <li>Добавление контактам поля 'Внутренний телефон'</li>
+                <li>Для головного управления часть сотрудников вынесена в выпадающий список</li>
+                <li>Изменение внешнего вида записей для более удобного чтения</li>
+            </ul>
+        </div>
+                <div class="updateBlock">
+            <p class="verionNum">Обновление 1.4 (05.02.2024)</p>
+            <ul>
+                <li>Переделана структура подразделений - вместо 4-ёх региональных узлов ПС участки разбиты по региональным структурным отделениям</li>
+                <li>Возможность просматривать информацию по ОПС</li>
+                <li>Добавление для каждого ОПС поля для индекса</li>
+            </ul>
+        </div>
+        <div class="updateBlock">
+            <p class="verionNum">Обновление 1.3 (29.01.2024)</p>
+            <ul>
+                <li>Сотрудники и отделения СМДП дополнительно разбиты по подразделениям</li>
+                <li>Для номеров в справочнике добавлены поля 'E-mail' и 'Факс'</li>
+            </ul>
+        </div>
+        <div class="updateBlock">
+            <p class="verionNum">Обновление 1.2 (25.01.2024)</p>
+            <ul>
+                <li>Добавление возможностей по кешированию страниц и запросов</li>
+                <li>Все запросы к базе данных переведены с ADO-подключения на EntityFrameworkCore для ускорения работы по поиску информации</li>
+            </ul>
+        </div>
+        <div class="updateBlock">
+            <p class="verionNum">Обновление 1.1 (08.01.2024)</p>
+            <ul>
+                <li>Значительно улучшены возможности по одновременной работе с множеством пользователей</li>
+                <li>Стресс-тестирование поддержки мультиввода, уменьшение времени отклика</li>
+                <li>Переделаны js-скрипты для полной поддержки функционала в браузере Google Chrome</li>
+            </ul>
+        </div>
+        <div class="updateBlock">
+            <p class="verionNum">Обновление 1.0 (05.01.2024)</p>
+            <ul>
+                <li>Релиз ПО на тестовом аппаратном оборудовании</li>
+                <li>Исправление критических ошибок, приводящих к падению сервера</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; РУП "Белпочта", 2024
+        </div>
+    </footer>
+    <div class="shadowbox">
+        <p style="margin:5px">
+            Для изменения масштаба<br />зажмите <b><kbd>CTRL</kbd></b> и двигайте<br />колесиком мыши
+            <div class="scroll-downs">
+                <div class="mousey">
+                    <div class="scroller"></div>
+                </div>
+            </div>
+        </p>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

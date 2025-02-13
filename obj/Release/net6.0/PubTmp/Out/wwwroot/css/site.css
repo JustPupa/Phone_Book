@@ -1,0 +1,315 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    min-height: 100%;
+}
+
+table {
+    min-width: 600px;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+td {
+    height: 30px;
+}
+
+
+.layer1 {
+    background-color: #fc0; /* Цвет фона слоя */
+    padding: 5px; /* Поля вокруг текста */
+    float: left; /* Обтекание по правому краю */
+    width: 200px; /* Ширина слоя */
+}
+
+.layer2 {
+    padding: 5px; /* Поля вокруг текста */
+    width: 300px; /* Ширина слоя */
+    float: left; /* Обтекание по правому краю */
+}
+
+.clear {
+    clear: left; /* Отмена обтекания */
+}
+
+.roundbutton {
+    /*background-color: #000000;*/
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+}
+
+.roundbutton img {
+    border-radius: 50%;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even) {
+    background-color: #bedfed
+}
+
+tr:nth-child(odd) {
+    background-color: white
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    padding: 0px;
+}
+
+.largecentered, .centered, .smallcentered, .centeredTgl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered, .smallcentered, .centeredTgl {
+    color: white;
+}
+
+.centered, .centeredTgl, .smallcentered {
+    -webkit-text-stroke: 1.25px #000000; /* Толщина и цвет обводки */
+}
+
+.centered {
+    font-size: 36px;
+}
+
+.centeredTgl {
+    font-size: 48px;
+}
+
+.smallcentered {
+    font-size: 28px
+}
+
+.largecentered {
+    color: greenyellow;
+    -webkit-text-stroke: 1.75px #000000; /* Толщина и цвет обводки */
+    font-size: 54px
+}
+
+#btncorner {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider, .slider:before {
+    position: absolute;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/* The slider */
+.slider {
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+}
+
+.slider:before {
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.opacityPH {
+    border-radius: 15px;
+    background-color: white;
+    margin: -1px;
+    padding: 2px;
+    display: inline-block;
+    opacity: 0.9;
+}
+
+.shadowbox {
+    width: 15em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 8px 12px;
+    background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    right: 15px;
+    top: 12%;
+    opacity: 20%;
+}
+
+.shadowbox:hover {
+    opacity: 80%;
+}
+
+.scroll-downs {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 34px;
+    height: 55px;
+}
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #000;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+.whatsNewBlock {
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 80%;
+    z-index: 10;
+    padding: 20px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+button.roundClose {
+    position: relative;
+    top: -18px;
+    right: 0px;
+    width: 35px;
+    height: 35px; /* Размеры кнопки */
+    background-color: #e03e25; /* Цвет фона */
+    border-radius: 50%; /* Радиус скругления */
+    border: none; /* Убираем рамку вокруг кнопки */
+    overflow: auto;
+    float: right;
+}
+
+button.roundClose img {
+    filter: brightness(0) invert(1);
+    display: block;
+    margin: auto;
+}
+
+.roundClose:hover {
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+.roundClose:hover img {
+    -webkit-filter: brightness(90%);
+}
+
+.updateBlock {
+    background-color: floralwhite;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px 5px;
+}

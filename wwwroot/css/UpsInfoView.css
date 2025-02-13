@@ -1,0 +1,14 @@
+﻿button {
+    top: 0;
+}
+
+button:hover img {
+    -webkit-filter: brightness(70%);
+    transition: top 0.4s ease-out;
+}
+
+button:hover {
+    position: relative;
+    top: -10px;
+    transition: top 0.4s ease-out;
+}

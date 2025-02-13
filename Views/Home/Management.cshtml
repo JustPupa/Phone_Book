@@ -1,0 +1,130 @@
+﻿@model Phone_book.Models.Dto.RupsWithUps
+
+@{
+    ViewData["Title"] = Model.RupsName;
+}
+
+<link rel="stylesheet" href="~/css/Management.css" type="text/css" />
+
+<div style="text-align:left">
+    <button id="btncorner" style="border:0px;background-color:transparent" type='button' onclick="location.href='/Home/Index'">
+        <img src="~/Images/back.png" height="50" width="50" />
+    </button>
+</div>
+
+<h1 style="margin-bottom:20px">@Model.RupsName</h1>
+
+@if (Model.EmployersWRups != null && Model.EmployersWRups.Any())
+{
+    <div style="margin-top:20px">
+        <h2>Руководство (штат РУПС):</h2><br>
+        <table class="center" id="staffOfRups">
+            @{
+                var empCounter = 1;
+            }
+            <tr>
+                <th>№</th>
+                <th>Ф.И.О.</th>
+                <th>Должность</th>
+                <th>Телефон (гор.)</th>
+                <th>Телефон (внутр.)</th>
+                <th>Телефон (моб.)</th>
+                <th>E-mail</th>
+                <th>Факс</th>
+            </tr>
+            @foreach (var item in Model.EmployersWRups)
+            {
+                <tr>
+                    <th colspan="8" style="font-size: 24px; text-align:center">@item.Item1</th>
+                </tr>
+                @foreach (var emp in item.Item2)
+                {
+                    <tr>
+                        <td>@(empCounter++)</td>
+                        <td>@emp.fullname</td>
+                        <td>@emp.job</td>
+                        <td>@emp.home_phone</td>
+                        <td>@emp.intern_phone</td>
+                        <td>@emp.mob_phone</td>
+                        <td>@emp.email</td>
+                        <td>@(emp.fax == true ? "Есть факc" : "")</td>
+                    </tr>
+                }
+                if (Model.Upss.Any(u => u.Item1 == item.Item1 && u.Item2.Any()))
+                {
+                    <tr>
+                        <th colspan="8" style="font-size: 24px; text-align:center">
+                            <span hidden>@item.Item1</span>
+                            <a onClick="GetSdepPeople(this.parentElement.parentElement.rowIndex, this.parentElement.children[0].textContent, this); return false;" href="javascript:void(0);">▼ Показать больше ▼</a>
+                        </th>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+}
+
+<script>
+    //Get employees for drop down list by department
+    function GetSdepPeople(rowIndex, depName, trgtElem) { 
+        $.ajax({   
+            type: "Get",
+            url: "/Home/GetManagersDropDown?depName=" + depName,
+            success: function (data) {
+                let table = document.getElementById("staffOfRups");
+                let counter = rowIndex;
+                Object.values(data).forEach((item) => {
+
+                    let row = table.insertRow(counter);
+                    let c1 = row.insertCell(0);
+                    c1.colSpan = "8";
+                    c1.style = "font-size:24px;font-weight: 500;";
+                    c1.innerText = item.sdep;
+                    counter++;
+
+                    item.phonesOfSdep.forEach((ph) => {
+                        let rowp = table.insertRow(counter);
+                        let cellp1 = rowp.insertCell(0);
+                        let cellp2 = rowp.insertCell(1);
+                        cellp2.innerText = ph.fullname;
+                        let cellp3 = rowp.insertCell(2);
+                        cellp3.innerText = ph.job;
+                        let cellp4 = rowp.insertCell(3);
+                        cellp4.innerText = ph.home_phone;
+                        let cellp5 = rowp.insertCell(4);
+                        cellp5.innerText = ph.intern_phone;
+                        let cellp6 = rowp.insertCell(5);
+                        cellp6.innerText = ph.mob_phone;
+                        let cellp7 = rowp.insertCell(6);
+                        cellp7.innerText = ph.email;
+                        let cellp8 = rowp.insertCell(7);
+                        if (ph.fax === true) {
+                            cellp8.innerText = 'Есть факс';
+                        }
+                        counter++;
+                    });
+                });
+                trgtElem.innerText = '▲ Скрыть ▲';
+                let action = 'RmExpand(' + rowIndex + ', ' + counter + ')';
+                trgtElem.setAttribute("onClick", action);
+            },
+            error: function (xhr, textStatus, exceptionThrown) {
+                var errorData = $.parseJSON(xhr.responseText);
+                alert(errorData);
+                waitingReq = false;
+            }
+        });
+    }
+
+    //Expand table of employees
+    function RmExpand(startIndex, endIndex) {
+        let table = document.getElementById("staffOfRups");
+        for (let i = startIndex; i < endIndex;i++) {
+            table.deleteRow(startIndex);
+        }
+        var trgtElem = event.target;
+        let action = 'GetSdepPeople(this.parentElement.parentElement.rowIndex, this.parentElement.children[0].textContent, this); return false;';
+        trgtElem.setAttribute("onClick", action);
+        trgtElem.innerText = '▼ Показать больше ▼';
+    }
+</script>

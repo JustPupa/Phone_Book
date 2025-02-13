@@ -1,0 +1,402 @@
+﻿@model Phone_book.Models.Dto.DSPidsNamesOnly
+
+@{
+    ViewData["Title"] = "Список отделов";
+}
+
+<link rel="stylesheet" href="~/css/Index.css" type="text/css" />
+
+<div class='myDiv'>
+    <div class='myDiv' style='margin-top:30px; text-align: center;'>
+        <button class="roundbutton" type="button" style='margin-right:40px' onclick="location.href='/Home/RupsSelected?rup=Mog&selTabInd=null'">
+            <div class="container">
+                <img src="~/Images/filial.jpg" height="250" width="250" />
+                <div class="centered">ГОЛОВНОЕ<br>УПРАВЛЕНИЕ</div>
+            </div>
+        </button>
+        <button class="roundbutton" type='button' style='margin-right:40px' onclick="location.href='/Home/RupsSelected?rup=Bob&selTabInd=null'">
+            <div class="container">
+                <img src="~/Images/bob.jpg" height="250" width="250" />
+                <div class="centered">БОБРУЙСКИЙ<br>РУПС</div>
+            </div>
+        </button>
+        <button class="roundbutton" type='button' onclick="location.href='/Home/RupsSelected?rup=Kri&selTabInd=null'">
+            <div class="container">
+                <img src="~/Images/kri.jpg" height="250" width="250" />
+                <div class="centered">КРИЧЕВСКИЙ<br>РУПС</div>
+            </div>
+        </button>
+    </div>
+    <div class='myDiv' style='margin-top:40px; text-align: center;'>
+        <button class="roundbutton" type='button' style='margin-right:40px' onclick="location.href='/Home/RupsSelected?rup=Gor&selTabInd=null'">
+            <div class="container">
+                <img src="~/Images/gor.jpg" height="250" width="250" />
+                <div class="centered">ГОРЕЦКИЙ<br>РУПС</div>
+            </div>
+        </button>
+        <button class="roundbutton" type='button' style='margin-right:40px' onclick="location.href='/Home/RupsSelected?rup=OCPS&selTabInd=null'">
+            <div class="container">
+                <img src="~/Images/mog.jpg" height="250" width="250" />
+                <div class="smallcentered">ОБЪЕДИНЕННЫЙ<br>ЦЕХ ПОЧТОВОЙ<br>СВЯЗИ</div>
+            </div>
+        </button>
+        <button class="roundbutton" type='button' onclick="location.href='/Home/RupsSelected?rup=MCPS&selTabInd=null'">
+            <div class="container">
+                <img src="~/Images/shklov.jpg" height="250" width="250" />
+                <div class="smallcentered">МОГИЛЕВСКИЙ<br>ЦЕХ ПОЧТОВОЙ<br>СВЯЗИ</div>
+            </div>
+        </button>
+    </div>
+
+    <div class="menubox">
+        <div>
+            <label class="switch">
+                <input type="checkbox" id="toggleSearcher">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div style="margin-left:10px">
+            <b id="captionB">
+                Глобальный поиск
+            </b>
+        </div>
+    </div>
+
+    <form id="allFieldsForm" hidden>
+        <div class="form-group">
+            <label for="deps">Отделение</label>
+            <input type="text" style="background-color: lightgrey;" class="form-control" id="deps">
+        </div>
+
+        <div class="form-group">
+            <label for="subdeps">Подразделение</label>
+            <input type="text" style="background-color: lightgrey;" class="form-control" id="subdeps">
+        </div>
+
+        <div class="form-group">
+            <label for="ops">ОПС</label>
+            <input type="text" style="background-color: lightgrey;" class="form-control" id="ops">
+        </div>
+
+        <div class="form-group">
+            <label for="phoness">Ф.И.О.</label>
+            <input type="text" style="background-color: lightgrey;" class="form-control" id="phoness">
+        </div>
+
+        <div class="form-group">
+            <label for="jobb">Должность</label>
+            <input type="text" style="background-color: lightgrey;" class="form-control" id="jobb">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="text" style="background-color: lightgrey;" class="form-control" id="phone">
+        </div>
+
+        <div class="form-group">
+            <label for="inphone">Внутренний телефон</label>
+            <input type="text" style="background-color: lightgrey;" class="form-control" id="inphone">
+        </div>
+
+        <div class="form-group">
+            <label for="mobphone">Моб. телефон</label>
+            <input type="text" style="background-color: lightgrey;" class="form-control" id="mobphone">
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="text" style="background-color: lightgrey;" class="form-control" id="email">
+        </div>
+
+        <div class="form-group">
+            <label for="index">Индекс</label>
+            <input type="text" style="background-color: lightgrey;" class="form-control" id="index">
+        </div>
+
+        <div class="buttonHolder" style="text-align: center;">
+            <button id="getPhonesMult" type="button" style='margin-top:20px;border:0px;background-color:transparent'>
+                <img src="~/Images/play.png" height="50" width="50" />
+            </button>
+        </div>
+    </form>
+
+    <form id="globalFieldsForm">
+        <div class="form-group" style="text-align: center;">
+            <label for="globalTb">Введите информацию для поиска</label>
+            <input type="text" class="form-control" id="globalTb" onkeyup="GTBchange(this.value)">
+        </div>
+
+        <div class="buttonHolder" style="text-align: center;">
+            <button id="getPhonesGlobal" type="button" style='margin-top:20px;border:0px;background-color:transparent'>
+                <img src="~/Images/play2.png" height="50" width="50" />
+            </button>
+        </div>
+    </form>
+
+    <div id="div1" hidden style="padding-top:20px">
+        <table class="phoneTable">
+            <tr>
+                <th>№</th>
+                <th>Ф.И.О.</th>
+                <th>Должность</th>
+                <th>Телефон (гор.)</th>
+                <th>Телефон (внутр.)</th>
+                <th>Телефон (моб.)</th>
+                <th>E-mail</th>
+                <th>Факс</th>
+                <th>Отделение</th>
+                <th>Подразделение</th>
+                <th>ОПС</th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="div2" hidden style="padding-top:20px">
+        <table class="opsTable">
+            <tr>
+                <th>№</th>
+                <th>Название</th>
+                <th>Отделение</th>
+                <th>Подразделение</th>
+                <th>Индекс</th>
+                <th>Адрес</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/jquery-3.7.1.js"></script>
+    <script src="~/js/jquery-ui.js"></script>
+
+    @* Set toggle to global search mode *@
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+            $("#toggleSearcher")[0].checked = true;
+            document.getElementById("globalTb").focus();
+        });
+
+        var toggle = false;
+
+        //Set triggers for search click buttons to be activated on Enter key pressed
+        $(document).ready(function () {
+            $('input').keydown(function (e) {
+                if (e.keyCode === 13) {
+                    if ($("#allFieldsForm")[0].hidden) {
+                        $('#getPhonesGlobal').trigger('click');
+                    }
+                    else if ($("#globalFieldsForm")[0].hidden) {
+                        $('#getPhonesMult').trigger('click');
+                    }
+                    event.preventDefault();
+                }
+            });
+        });
+
+        //Set autocomplete for mulitple field search from loaded Model 
+        var deps = JSON.parse('@Html.Raw(Json.Serialize(Model.Deps.Select(d => d.name).Distinct().ToList()))');
+
+        $("#deps").autocomplete({
+            source: deps,
+            minLength: 1
+        });
+
+        var sdeps = JSON.parse('@Html.Raw(Json.Serialize(Model.SubDeps.Select(d => d.name).Distinct().ToList()))');
+
+        $("#subdeps").autocomplete({
+            source: sdeps,
+            minLength: 1
+        });
+
+        var opses = JSON.parse('@Html.Raw(Json.Serialize(Model.Ops.Select(d => d.name).Distinct().ToList()))');
+
+        $("#ops").autocomplete({
+            source: opses,
+            minLength: 1
+        });
+
+        var phs = JSON.parse('@Html.Raw(Json.Serialize(Model.Phones.Select(p => p.name).Distinct().ToList()))');
+
+        $("#phoness").autocomplete({
+            source: phs,
+            minLength: 1
+        });
+
+        var jobsss = JSON.parse('@Html.Raw(Json.Serialize(Model.Jobs.Select(p => p.name).Distinct().ToList()))');
+
+        $("#jobb").autocomplete({
+            source: jobsss,
+            minLength: 1
+        });
+
+        let form1 = document.getElementById('allFieldsForm');
+        let form2 = document.getElementById('globalFieldsForm');
+
+        let gtb = $("#globalTb")[0];
+
+        //waitingReq parameter to prevent an unnecessary SQL query on the same context 
+        let waitingReq = false;
+
+        //Multiple field search operation
+        $(function () {
+            $("#getPhonesMult").click(function () {
+                if (waitingReq) {
+                    return;
+                }
+                waitingReq = true;
+                document.getElementById('div1').hidden = true;
+                document.getElementById('div2').hidden = true;
+
+                var d = $("#deps")[0].value;
+                var s = document.getElementById('subdeps').value;
+                var o = document.getElementById('ops').value;
+                var p = document.getElementById('phoness').value;
+                var j = document.getElementById('jobb').value;
+                var phn = document.getElementById('phone').value;
+                var iph = document.getElementById('inphone').value;
+                var mph = document.getElementById('mobphone').value;
+                var eml = document.getElementById('email').value;
+
+                $.ajax({
+                    type: "Get",
+                    url: "/Home/GetPhonesByMulti?dep=" + d + "&sdep=" + s + "&ops=" + o + "&phone=" + p + "&job=" + j
+                        + "&numb=" + phn + "&inphone=" + iph + "&mob=" + mph + "&mail=" + eml,
+                    success: function (data) {
+                        //Make the result table visible
+                        document.getElementById('div1').hidden = false;
+                        $(".removable").remove();
+                        const tbody = document.querySelector('.phoneTable').tBodies[0];
+                        var counter = 1;
+                        Object.values(data).forEach((item) => {
+                            console.log(item);
+                            row = tbody.insertRow();
+                            //Indicate that the row can be removed on the next search operation
+                            row.classList.add("removable");
+                            [counter++, item.fullname, item.job, item.home_Phone, item.intern_Phone, item.mob_Phone, item.email, item.fax === true ? '+' : '', item.department, item.subDepartment, item.ops].forEach(v => row.insertCell().textContent = v);  // добавление в строку таблицы новых ячеек, и их заполнение значениями из массива
+                        });
+                        waitingReq = false;
+                    },
+                    error: function (xhr, textStatus, exceptionThrown) {
+                        var errorData = $.parseJSON(xhr.responseText);
+                        alert(errorData);
+                        waitingReq = false;
+                    }
+                });
+            });
+        });
+
+        //Change the search mode and focus the first column
+        $(function () {
+            $("#toggleSearcher").change(function () {
+                form1.hidden = toggle;
+                form2.hidden = !toggle;
+                toggle = !toggle;
+                var b = $("#captionB")[0];
+                if (toggle === false) {
+                    b.textContent = "Глобальный поиск";
+                    document.getElementById("globalTb").focus();
+                }
+                else {
+                    b.textContent = "Поиск по нескольким полям";
+                    document.getElementById("deps").focus();
+                }
+            });
+        });
+
+        /*
+        Load autocomplete items on any character input or removing 
+        There is no need to make SQL query by one charecter input - there will be too many results in autocomplete data 
+        */
+        function GTBchange(text) {
+            if (text.length < 2 || waitingReq) {
+                return;
+            }
+            waitingReq = true;
+            $.ajax({
+                type: "Get",
+                url: "/Home/GetAutocompleteData?input=" + text,
+                success: function (data) {
+                    $("#globalTb").autocomplete({
+                        source: data
+                    });
+                    waitingReq = false;
+                },
+                error: function (response) {
+                     /*
+                     In the debug mode it takes much longer to perform SQL queries and load JSON 
+                     This message barely shows in release mode
+                     */
+                    console.log('Было отправлено много запросов. Результат может быть недостоверным.');
+                    waitingReq = false;
+                }
+            });
+        };
+
+        //Load searching result of the global input
+        $(function () {
+            $("#getPhonesGlobal").click(function () {
+                if (gtb.value.length < 2 || waitingReq) {
+                    return;
+                }
+                waitingReq = true;
+                document.getElementById('div1').hidden = true;
+                document.getElementById('div2').hidden = true;
+                $.ajax({
+                    type: "Get",
+                    url: "/Home/GetPhonesByGlobal?input=" + gtb.value,
+                    success: function (data) {
+                        $(".removable").remove();
+                        //Table for employee results
+                        if (data.emps.length) {
+                            const tbody = document.querySelector('.phoneTable').tBodies[0];
+                            var counter = 1;
+                            Object.values(data.emps).forEach((item) => {
+                                row = tbody.insertRow();
+                                row.classList.add("removable");
+                                [counter++, item.fullname, item.job, item.home_Phone, item.intern_Phone, item.mobile_Phone, item.email, item.fax === true ? '+' : '', item.department, item.subDepartment, item.ops].forEach(v => row.insertCell().textContent = v);  // добавление в строку таблицы новых ячеек, и их заполнение значениями из массива
+                            });
+                            document.getElementById('div1').hidden = false;
+                        }
+
+                        //Table for a post office results
+                        if (data.opses.length > 0) {
+                            const tbody2 = document.querySelector('.opsTable').tBodies[0];
+                            var counter2 = 1;
+                            Object.values(data.opses).forEach((item) => {
+                                row = tbody2.insertRow();
+                                row.classList.add("removable");
+                                [counter2++, item.name, item.dep, item.subdep, item.index, item.address].forEach(v => row.insertCell().textContent = v);  // добавление в строку таблицы новых ячеек, и их заполнение значениями из массива
+                            });
+                            document.getElementById('div2').hidden = false;
+                        }
+                        highlight();
+                        waitingReq = false;
+                    },
+                    error: function (xhr, textStatus, exceptionThrown) {
+                        var errorData = $.parseJSON(xhr.responseText);
+                        alert(errorData);
+                        waitingReq = false;
+                    }
+                });
+            });
+        });
+
+        //Highlight searching fragment in the result set only for global search mode
+        function highlight() {
+            var textToReplace = document.getElementById("globalTb").value;
+            var sentences = document.querySelectorAll('td');
+            sentences.forEach(s => {
+                var text = s.textContent;
+                var regex = new RegExp(textToReplace, 'ig');
+                let myArray = text.match(regex);
+                if (myArray !== null) {
+                    myArray = [...new Set(myArray)];
+                    myArray.forEach(ma => {
+                        text = text.replaceAll(ma, `<span class="highlight">${ma}</span>`);
+                        s.innerHTML = text;
+                    });
+                }
+            });
+        }
+    </script>
+}

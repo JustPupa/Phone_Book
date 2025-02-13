@@ -1,0 +1,144 @@
+﻿@model Phone_book.Models.Dto.RupsWithUps
+
+@{
+    ViewData["Title"] = Model.RupsName;
+}
+
+<link rel="stylesheet" href="~/css/RupsConcrete.css" type="text/css" />
+
+<div style="text-align:left">
+    <button id="btncorner" style="border:0px;background-color:transparent" type='button' onclick="location.href='/Home/Index'">
+        <img src="~/Images/back.png" height="50" width="50" />
+    </button>
+</div>
+
+<h1 style="margin-bottom:20px">@Model.RupsName</h1>
+
+<div>
+    @if (Model.Upss != null && Model.Upss.Any())
+    {
+        <button type="button" id="b1" class="optionPctr" style='border-radius: 15%;padding: 3px' onclick="hide('div1')">
+            <div class="container">
+                <img src="~/Images/subdepartment.png" style="border-radius: 15%;" height="350" width="350" />
+                <div class="centeredTgl" style="font-size:58px;-webkit-text-stroke: 2.5px #000000">УЧАСТКИ<br>ПОЧТОВОЙ<br>СВЯЗИ</div>
+            </div>
+        </button>
+    }
+    @if (Model.Opss != null && Model.Opss.Any())
+    {
+        <button type="button" id="b2" class="optionPctr" style="border-radius: 15%;padding: 3px" onclick="hide('div2')">
+            <div class="container">
+                <img src="~/Images/opsbuilding.png" style="border-radius: 15%;" height="350" width="350" />
+                <div class="centeredTgl" style="font-size:58px;-webkit-text-stroke: 2.5px #000000">ОТДЕЛЕНИЯ<br>ПОЧТОВОЙ<br>СВЯЗИ</div>
+            </div>
+        </button>
+    }
+</div>
+
+<div id="div1" class="hideable" hidden>
+    @* All sub departments related to the current one *@
+    <h2>Участки почтовой связи:</h2>
+    <table class="center">
+        @foreach (var item in Model.Upss)
+        {
+            <tr>
+                <th style="font-size: 24px; text-align:center">@item.Item1</th>
+            </tr>
+            @foreach (var ups in item.Item2)
+            {
+                <tr style="text-align:center">
+                    <td> <a href="/Home/UPSselected?ups=@ups.id&alias=@Model.AliasName&selTabInd=0" style="font-size: 24px">@ups.name</a></td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+
+<div id="div2" page="1" class="hideable" hidden>
+    @* All post offices related to the current one *@
+    <h2>Отделения почтовой связи:</h2>
+    <table class="center">
+        @{
+            var opscounter = 1;
+            @foreach (var item in Model.Opss)
+            {
+                <tr>
+                    <td style="text-align:center">@(opscounter++)</td>
+                    <td style="text-align:center"><a href="/Home/ViewOps?opsId=@item.id&alias=@Model.AliasName&selTabInd=1">@item.name</a></td>
+                    <td style="text-align:center">@item.index</td>
+                    <td style="text-align:center">@item.address</td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+
+@if (Model.EmployersWRups != null && Model.EmployersWRups.Any())
+{
+    <div style="margin-top:20px">
+        <h2>Руководство (штат РУПС):</h2><br>
+        <table class="center" id="staffOfRups">
+        @{
+            var empCounter = 1;
+        }
+        <tr>
+            <th>№</th>
+            <th>Ф.И.О.</th>
+            <th>Должность</th>
+            <th>Телефон (гор.)</th>
+            <th>Телефон (внутр.)</th>
+            <th>Телефон (моб.)</th>
+            <th>E-mail</th>
+            <th>Факс</th>
+        </tr>
+        @foreach (var item in Model.EmployersWRups)
+        {
+            <tr>
+                <th colspan="8" style="font-size: 24px; text-align:center">@item.Item1</th>
+            </tr>
+            @foreach (var emp in item.Item2)
+            {
+                <tr>
+                    <td>@(empCounter++)</td>
+                    <td>@emp.fullname</td>
+                    <td>@emp.job</td>
+                    <td>@emp.home_phone</td>
+                    <td>@emp.intern_phone</td>
+                    <td>@emp.mob_phone</td>
+                    <td>@emp.email</td>
+                    <td>@(emp.fax == true ? "Есть факc" : "")</td>
+                </tr>
+            }
+        }
+        </table>
+    </div>
+}
+
+<script type="text/javascript">
+    function hide (divid) {
+        //Hide an unnecessary tab with no elements in it
+        let hideabletabs = document.getElementsByClassName("hideable");
+        if (document.getElementById(divid).hidden === false) {
+            for (let i = 0; i < hideabletabs.length; i++) {
+                hideabletabs[i].hidden = true;
+            }
+            document.getElementById('b' + divid[3]).style.backgroundColor = 'white';
+            return;
+        }
+        if (document.getElementById(divid).hidden === true) {
+            for (let i = 0; i < hideabletabs.length; i++) {
+                hideabletabs[i].hidden = true;
+            }
+            document.getElementById(divid).hidden = false;
+            toggleHide(divid);
+        }
+    }
+        
+    function toggleHide(value) {
+        let bts = document.getElementsByClassName('optionPctr');
+        for (var i = 0; i < bts.length; i++) {
+            bts[i].style.backgroundColor = 'white';
+        }
+        document.getElementById('b' + value[3]).style.backgroundColor = '#00a6fb';
+    }
+</script>

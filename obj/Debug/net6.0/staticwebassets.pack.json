@@ -1,0 +1,413 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Phone_Book.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Phone_Book.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\Background\\3386851.jpg",
+      "PackagePath": "staticwebassets\\Images\\Background\\3386851.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\Background\\5559852.jpg",
+      "PackagePath": "staticwebassets\\Images\\Background\\5559852.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\Background\\blue-background-banner-perfect-canva.jpg",
+      "PackagePath": "staticwebassets\\Images\\Background\\blue-background-banner-perfect-canva.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\Background\\elegant-white-bckg.jpg",
+      "PackagePath": "staticwebassets\\Images\\Background\\elegant-white-bckg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\Background\\paper-style-monochrome.jpg",
+      "PackagePath": "staticwebassets\\Images\\Background\\paper-style-monochrome.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\back.png",
+      "PackagePath": "staticwebassets\\Images\\back.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\belpost3.jpg",
+      "PackagePath": "staticwebassets\\Images\\belpost3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\belpostMCPS.jpg",
+      "PackagePath": "staticwebassets\\Images\\belpostMCPS.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\belpostOCPS.jpg",
+      "PackagePath": "staticwebassets\\Images\\belpostOCPS.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\belpost_logo.png",
+      "PackagePath": "staticwebassets\\Images\\belpost_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\bob.jpg",
+      "PackagePath": "staticwebassets\\Images\\bob.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\close.png",
+      "PackagePath": "staticwebassets\\Images\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\employee.png",
+      "PackagePath": "staticwebassets\\Images\\employee.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\exit.png",
+      "PackagePath": "staticwebassets\\Images\\exit.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\filial.jpg",
+      "PackagePath": "staticwebassets\\Images\\filial.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\gor.jpg",
+      "PackagePath": "staticwebassets\\Images\\gor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\home-button.png",
+      "PackagePath": "staticwebassets\\Images\\home-button.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\home-page.png",
+      "PackagePath": "staticwebassets\\Images\\home-page.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\kri.jpg",
+      "PackagePath": "staticwebassets\\Images\\kri.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\magnifier.png",
+      "PackagePath": "staticwebassets\\Images\\magnifier.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\mog.jpg",
+      "PackagePath": "staticwebassets\\Images\\mog.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\opsbuilding.png",
+      "PackagePath": "staticwebassets\\Images\\opsbuilding.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\play.png",
+      "PackagePath": "staticwebassets\\Images\\play.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\play2.png",
+      "PackagePath": "staticwebassets\\Images\\play2.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\searchicon.png",
+      "PackagePath": "staticwebassets\\Images\\searchicon.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\searching.jpg",
+      "PackagePath": "staticwebassets\\Images\\searching.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\shklov.jpg",
+      "PackagePath": "staticwebassets\\Images\\shklov.jpg"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\subdepartment.png",
+      "PackagePath": "staticwebassets\\Images\\subdepartment.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\Images\\white-2484120_1920.png",
+      "PackagePath": "staticwebassets\\Images\\white-2484120_1920.png"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\css\\Management.css",
+      "PackagePath": "staticwebassets\\css\\Management.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\css\\PersonViewer.css",
+      "PackagePath": "staticwebassets\\css\\PersonViewer.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\css\\RupsConcrete.css",
+      "PackagePath": "staticwebassets\\css\\RupsConcrete.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\css\\UpsInfoView.css",
+      "PackagePath": "staticwebassets\\css\\UpsInfoView.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\js\\jquery-3.7.1.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.7.1.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\js\\jquery-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.7.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\js\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Phone_Book.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Phone_Book.props",
+      "PackagePath": "build\\Phone_Book.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Phone_Book.props",
+      "PackagePath": "buildMultiTargeting\\Phone_Book.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Phone_Book.props",
+      "PackagePath": "buildTransitive\\Phone_Book.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

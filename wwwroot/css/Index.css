@@ -1,0 +1,106 @@
+﻿.ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 20px;
+}
+
+.ui-autocomplete > li > div {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333333;
+    white-space: nowrap;
+}
+
+.ui-state-hover,
+.ui-state-active,
+.ui-state-focus {
+    text-decoration: none;
+    color: #262626;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.menubox {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menubox div {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+#globalTb {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('/Images/searchicon.png');
+    background-position: 10px 13px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    padding: 2px;
+}
+
+button:hover img {
+    -webkit-filter: brightness(90%);
+}
+
+button:hover {
+    transform: scale(1.02);
+    transition: all 0.5s ease;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+label {
+    font-size: 22px;
+    -webkit-text-stroke: 1px black;
+}

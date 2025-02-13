@@ -1,0 +1,106 @@
+﻿@model Phone_book.Models.Dto.UpsInfo
+
+@{
+    ViewData["Title"] = Model.UpsName;
+}
+
+<link rel="stylesheet" href="~/css/UpsInfoView.css" type="text/css" />
+
+<div style="text-align:left">
+    <button id="btncorner" style="border:0px;background-color:transparent" type='button' onclick="location.href='/Home/RupsSelected?rup=@Model.DepName&selTabInd=@Model.SelTabInd'">
+        <img src="~/Images/back.png" height="50" width="50" />
+    </button>
+    <button id="btncorner" style="border:0px;background-color:transparent" type='button' onclick="location.href='/Home/Index'">
+        <img src="~/Images/home-button.png" height="50" width="50" />
+    </button>
+</div>
+
+<h1 style="margin-bottom:20px">@Model.UpsName</h1>
+
+@if (Model.Opses != null && Model.Opses.Any())
+{
+    <button type="button" class="optionPctr" id="b2" style="border-radius: 15%;padding: 3px" onclick="hide('div2')">
+        <div class="container">
+            <img src="~/Images/opsbuilding.png" style="border-radius: 15%;" height="350" width="350" />
+            <div class="centeredTgl">ОТДЕЛЕНИЯ<br>ПОЧТОВОЙ<br>СВЯЗИ</div>
+        </div>
+    </button>
+}
+<div id="div2" class="hideable" hidden>
+    @* All post offices by sub department *@
+    <h2>Отделения почтовой связи:</h2><br>
+    <table class="center">
+        @{
+            var opscounter = 1;
+            @foreach (var item in Model.Opses)
+            {
+                <tr>
+                    <td style="text-align:center">@(opscounter++)</td>
+                    <td style="text-align:center">
+                        <a href="/Home/ViewOps?opsId=@item.id&alias=@Model.DepName">@item.name</a>
+                    </td>
+                    <td style="text-align:center">@item.index</td>
+                    <td style="text-align:center">@item.address</td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+
+@if (Model.Employees.Any())
+{
+<div id="div3">
+    <h2>Руководство (штат УПС):</h2><br>
+    <table class="center">
+        @{
+            var empCounter = 1;
+        }
+        <tr>
+            <th>№</th>
+            <th>Ф.И.О.</th>
+            <th>Должность</th>
+            <th>Телефон (гор.)</th>
+            <th>Телефон (внутр.)</th>
+            <th>Телефон (моб.)</th>
+            <th>E-mail</th>
+            <th>Факс</th>
+        </tr>
+        @foreach (var item in Model.Employees)
+        {
+            <tr>
+                <td>@(empCounter++)</td>
+                <td>@item.fullname</td>
+                <td>@item.job</td>
+                <td>@item.home_phone</td>
+                <td>@item.intern_phone</td>
+                <td>@item.mob_phone</td>
+                <td>@item.email</td>
+                <td>@(item.fax == true ? "Есть факc" : "")</td>
+            </tr>
+        }
+    </table>
+</div>
+}
+
+@section Scripts{
+    <script>
+        //Click the only optionPctr to be viewed by default on a DOMContentLoaded event
+        document.addEventListener("DOMContentLoaded", () => {
+            var allbts = document.getElementsByClassName('optionPctr');
+            if (allbts != null && allbts.length > 0) {
+                allbts[allbts.length-1].click();
+            }
+        });
+
+        //Hide div with a table on toggle
+        function hide(divid) {
+            var d = document.getElementById(divid);
+            if (d.hidden) {
+                document.querySelector('#b2').style.backgroundColor = 'white';
+            } else {
+                document.querySelector('#b2').style.backgroundColor = '#00a6fb';
+            }
+            d.hidden = !d.hidden;
+        }
+    </script>
+}

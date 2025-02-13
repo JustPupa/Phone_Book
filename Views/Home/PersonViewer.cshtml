@@ -1,0 +1,74 @@
+﻿@model Phone_book.Models.Dto.EmployeesWithLink
+
+@* Set dominant element for current employees as a page title *@
+@{   
+    if (Model.Dep.Item2 != null)
+    {
+       ViewData["Title"] = Model.Dep.Item2; 
+    }
+    if (Model.Sdep.Item2 != null)
+    {
+        ViewData["Title"] = Model.Sdep.Item2;
+    }
+    if (Model.Ops.Item2 != null)
+    {
+       ViewData["Title"] = Model.Ops.Item2; 
+    }
+}
+
+<link rel="stylesheet" href="~/css/PersonViewer.css" type="text/css" />
+
+<div style="text-align:left">
+    <button id="btncorner" style="border:0px;background-color:transparent" onclick="location.href='/Home/RupsSelected?rup=@Model.DepAlias&selTabInd=@Model.SelTabInd'">
+        <img src="~/Images/back.png" height="50" width="50" />
+    </button>
+    <button id="btncorner" style="border:0px;background-color:transparent" type='button' onclick="location.href='/Home/Index'">
+        <img src="~/Images/home-button.png" height="50" width="50" />
+    </button>
+</div>
+
+@* View dominant element for current employees *@
+@{
+    if (Model.Ops.Item1 != null)
+    {
+        <h1>@Model.Ops.Item2</h1>
+    }
+    if (Model.Sdep.Item1 != null)
+    {
+        <h1>@Model.Sdep.Item2</h1>
+    }
+    if (Model.Dep.Item1 != null)
+    {
+        <h1>@Model.Dep.Item2</h1>
+    }
+}
+<h2>Cотрудники:</h2>
+<br>
+<div id="container">
+    <table class="phoneTable">
+        @{var empCounter = 1;}
+            <tr>
+                <th>№</th>
+                <th>Ф.И.О.</th>
+                <th>Должность</th>
+                <th>Телефон (гор.)</th>
+                <th>Телефон (внутр.)</th>
+                <th>Телефон (моб.)</th>
+                <th>E-mail</th>
+                <th>Факс</th>
+            </tr>
+        @foreach (var item in Model.Employees)
+        {
+            <tr>
+                <td>@(empCounter++)</td>
+                <td>@item.fullname</td>
+                <td>@item.job</td>
+                <td>@item.home_phone</td>
+                <td>@item.intern_phone</td>
+                <td>@item.mob_phone</td>
+                <td>@item.email</td>
+                <td>@(item.fax == true ? "Есть факc" : "")</td>
+            </tr>
+        }
+    </table>
+</div>
