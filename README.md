@@ -1,4 +1,4 @@
-ABOUT PROJECT
+Phone_Book
 =====================
 
 ***Phone_Book*** is a project that allows people working in one or different organizations 
