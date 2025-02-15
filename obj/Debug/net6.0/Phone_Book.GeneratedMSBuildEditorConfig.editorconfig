@@ -9,51 +9,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Phone_Book
 build_property.RootNamespace = Phone_Book
-build_property.ProjectDir = C:\Users\АНДРЕЙ\source\repos\Phone_Book-main\Phone_book\
+build_property.ProjectDir = D:\Repos\Phone_Book\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\АНДРЕЙ\source\repos\Phone_Book-main\Phone_book
+build_property.MSBuildProjectDirectory = D:\Repos\Phone_Book
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/АНДРЕЙ/source/repos/Phone_Book-main/Phone_book/Views/Home/Index.cshtml]
+[D:/Repos/Phone_Book/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/АНДРЕЙ/source/repos/Phone_Book-main/Phone_book/Views/Home/Management.cshtml]
+[D:/Repos/Phone_Book/Views/Home/Management.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYW5hZ2VtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/АНДРЕЙ/source/repos/Phone_Book-main/Phone_book/Views/Home/PersonViewer.cshtml]
+[D:/Repos/Phone_Book/Views/Home/PersonViewer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJzb25WaWV3ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/АНДРЕЙ/source/repos/Phone_Book-main/Phone_book/Views/Home/RupsConcrete.cshtml]
+[D:/Repos/Phone_Book/Views/Home/RupsConcrete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSdXBzQ29uY3JldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/АНДРЕЙ/source/repos/Phone_Book-main/Phone_book/Views/Home/UpsInfoView.cshtml]
+[D:/Repos/Phone_Book/Views/Home/UpsInfoView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVcHNJbmZvVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/АНДРЕЙ/source/repos/Phone_Book-main/Phone_book/Views/Shared/Error.cshtml]
+[D:/Repos/Phone_Book/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/АНДРЕЙ/source/repos/Phone_Book-main/Phone_book/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Repos/Phone_Book/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/АНДРЕЙ/source/repos/Phone_Book-main/Phone_book/Views/_ViewImports.cshtml]
+[D:/Repos/Phone_Book/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/АНДРЕЙ/source/repos/Phone_Book-main/Phone_book/Views/_ViewStart.cshtml]
+[D:/Repos/Phone_Book/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/АНДРЕЙ/source/repos/Phone_Book-main/Phone_book/Views/Shared/_Layout.cshtml]
+[D:/Repos/Phone_Book/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-w9216lyl7b

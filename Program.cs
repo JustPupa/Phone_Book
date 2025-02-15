@@ -14,7 +14,6 @@ namespace Phone_book
                 builder.Services.AddControllersWithViews();
                 builder.Services.AddResponseCaching();
                 CreateHostBuilder(args).Build();
-
                 var app = builder.Build();
                 if (!app.Environment.IsDevelopment())
                 {
@@ -22,6 +21,7 @@ namespace Phone_book
                     app.UseHsts();
                 }
                 app.UseStaticFiles();
+                //Define route to match endpoints
                 app.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

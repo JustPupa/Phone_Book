@@ -6613,11 +6613,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\Phone_Book.csproj",
+      "projectUniqueName": "D:\\Repos\\Phone_Book\\Phone_Book.csproj",
       "projectName": "Phone_Book",
-      "projectPath": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\Phone_Book.csproj",
+      "projectPath": "D:\\Repos\\Phone_Book\\Phone_Book.csproj",
       "packagesPath": "C:\\Users\\АНДРЕЙ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\obj\\",
+      "outputPath": "D:\\Repos\\Phone_Book\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\АНДРЕЙ\\AppData\\Roaming\\NuGet\\NuGet.Config",

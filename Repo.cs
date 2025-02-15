@@ -14,12 +14,13 @@ namespace Phone_book
             try
             {
                 var a = new TASQLRepository().GetAll<Departments>("departments");
+                //If there is no error TASQLRepository is set as default repository
                 Rep = new TASQLRepository();
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Не удалось выполнить подключение с помощью DbContext.\n" +
-                    "Будет использован ODBC драйвер по умолчанию.\nСообщение:\n" + ex.Message);
+                Console.WriteLine("Database connection via DbContext error.\n" +
+                    "ODBC driver is set by default.\nError message:\n" + ex.Message);
                 Rep = new ODBCRepository();
             }
         }
@@ -90,11 +91,20 @@ namespace Phone_book
     public interface IRepository
     {
         List<T> GetAll<T>(string instanceName) where T : new();
-        T GetSingle<T>(string instanceName, List<(string propSql, string valSql, SQLwhereOperations sqlOp)> whereConditions, bool isOr = false) where T : class, new();
-        IQueryable<T> GetByWhere<T>(string instanceName, List<(string propSql, string valSql, SQLwhereOperations sqlOp)> whereConditions, bool isOr = false) where T : class, new();
+        T GetSingle<T>(
+            string instanceName, 
+            List<(string propSql, string valSql, SQLwhereOperations sqlOp)> whereConditions,
+            bool isOr = false) where T : class, new();
+        IQueryable<T> GetByWhere<T>(
+            string instanceName, 
+            List<(string propSql, string valSql, SQLwhereOperations sqlOp)> whereConditions, 
+            bool isOr = false) where T : class, new();
         void Insert<T>(string instanceName, T instance) where T : class;
         void Remove<T>(string instanceName, T instance) where T : class;
-        void Update<T, I>(string instance, List<(string propSql, string valSql, SQLwhereOperations sqlOp)> whereConditions, List<(string, T)> valuesToUpd) where I : class;
+        void Update<T, I>(
+            string instance, 
+            List<(string propSql, string valSql, SQLwhereOperations sqlOp)> whereConditions, 
+            List<(string, T)> valuesToUpd) where I : class;
     }
 
     public class TASQLRepository : IRepository
@@ -102,11 +112,7 @@ namespace Phone_book
         static TASQLcontext Database { get; set; }
         static TASQLRepository()
         {
-            if (Database == null)
-            {
-                //TASQLcontext is set by default
-                Database = new TASQLcontext();
-            }
+            Database ??= new TASQLcontext();
         }
         public List<T>? GetAll<T>(string instanceName) where T : new() 
         {
@@ -116,6 +122,7 @@ namespace Phone_book
         {
             var db = Database[instanceName] as DbSet<T>;
             IQueryable<T> filteredDb = db.AsNoTracking()?.AsQueryable();
+            //Conditions may be mutually exclusive
             if (!isOr)
             {
                 foreach (var (propSql, valSql, sqlOp) in whereConditions)
@@ -182,8 +189,7 @@ namespace Phone_book
             }
             catch (Exception ex)
             {
-                //_ = MessageBox.Show("Ошибка при обновлении ключевых столбцов.\nЕсли вы уверены, что хотите изменить эти данные" +
-                //    " попробуйте использовать другой тип подключения.\nСообщение:\n" + ex.Message);
+                Console.WriteLine("There is an error occurred while saving changes. Message: " + ex.Message);
             }
 
             IQueryable<I> GetWhereResult(IQueryable<I> objQuerry, string tableColname, string tableValue, SQLwhereOperations oper)
@@ -220,6 +226,7 @@ namespace Phone_book
             }
             protected override void OnModelCreating(ModelBuilder builder)
             {
+                //Table name differs from its mapped class
                 builder.Entity<Departments>(entity => {
                     entity.ToTable("departments");
                 });
@@ -238,6 +245,7 @@ namespace Phone_book
             public virtual DbSet<Person> person { get; set; }
             public virtual DbSet<Ops> ops { get; set; }
 
+            //Extension method to get DB table from context 
             public object this[string propertyName]
             {
                 get
@@ -261,12 +269,12 @@ namespace Phone_book
         static OdbcConnection DbConnection { get; set; }
         static ODBCRepository()
         {
-            OdbcConnectionStringBuilder builder = new OdbcConnectionStringBuilder() { Driver = "ODBC Driver 17 for SQL Server" };
+            OdbcConnectionStringBuilder builder = new() { Driver = "ODBC Driver 17 for SQL Server" };
             builder.Add("Server", "server_adress");
             builder.Add("Initial Catalog", "my_database");
             builder.Add("Uid", "Login");
             builder.Add("Pwd", "Password");
-            DbConnection = new OdbcConnection(builder.ConnectionString);
+            DbConnection = new(builder.ConnectionString);
             DbConnection.Open();
         }
         public List<T> GetAll<T>(string instanceName) where T : new()
@@ -275,7 +283,7 @@ namespace Phone_book
             DbCommand.CommandText = $"SELECT * FROM {instanceName}";
             OdbcDataReader DbReader = DbCommand.ExecuteReader();
             {
-                List<T> RetVal = new List<T>();
+                List<T> RetVal = new();
                 var Entity = typeof(T);
                 var PropDict = new Dictionary<string, PropertyInfo>();
                 try
@@ -286,7 +294,7 @@ namespace Phone_book
                         PropDict = Props.ToDictionary(p => p.Name.ToUpper(), p => p);
                         while (DbReader.Read())
                         {
-                            T newObject = new T();
+                            T newObject = new();
                             for (int Index = 0; Index < DbReader.FieldCount; Index++)
                             {
                                 if (PropDict.ContainsKey(DbReader.GetName(Index).ToUpper()))
@@ -361,7 +369,7 @@ namespace Phone_book
             DbCommand.CommandText = $"SELECT * FROM {instanceName} WHERE {GetWhereConditionStr(whereConditions, isOr)}";
             OdbcDataReader DbReader = DbCommand.ExecuteReader();
             {
-                List<T> RetVal = new List<T>();
+                List<T> RetVal = new();
                 var Entity = typeof(T);
                 var PropDict = new Dictionary<string, PropertyInfo>();
                 try
@@ -372,7 +380,7 @@ namespace Phone_book
                         PropDict = Props.ToDictionary(p => p.Name.ToUpper(), p => p);
                         while (DbReader.Read())
                         {
-                            T newObject = new T();
+                            T newObject = new();
                             for (int Index = 0; Index < DbReader.FieldCount; Index++)
                             {
                                 if (PropDict.ContainsKey(DbReader.GetName(Index).ToUpper()))
@@ -408,7 +416,7 @@ namespace Phone_book
         {
             CommonExecute($"DELETE FROM {instanceName} WHERE {Converter(GetFields(instance), GetFieldValues(instance))}");
         }
-        private List<string> GetFieldValues<T>(T instance) where T : class
+        private static List<string> GetFieldValues<T>(T instance) where T : class
         {
             var fieldValues = GetType(instance.GetType(), instance);
             if (!fieldValues.Any())
@@ -417,7 +425,7 @@ namespace Phone_book
             }
             return fieldValues;
         }
-        private void CommonExecute(string command)
+        private static void CommonExecute(string command)
         {
             OdbcCommand DbCommand = DbConnection.CreateCommand();
             DbCommand.CommandText = command;
@@ -444,7 +452,7 @@ namespace Phone_book
         }
         private static string ConcatValuesForUpdate<T>(List<(string, T)> valuesToUpd)
         {
-            List<string> outputList = new List<string>();
+            List<string> outputList = new();
             foreach (var v in valuesToUpd)
             {
                 var convertedVal = v.Item2.ConvertSQLval() == "NULL" ? v.Item2.ConvertSQLval() : "'" + v.Item2.ConvertSQLval() + "'";

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+K1eWkJ6/B9R85m9NZC2oxwnunrXU+5GsyNph2mL5wnO6zKUs5JVvXJdq/tk6U6N2sQgOPlGFqI8s3n7D+bWVw==",
+  "dgSpecHash": "dg75Z3TWGvrlmOQphDIBEAwpWRhDrWNXilrhXLIjJ70oyw9sJMKJ5Jvn3ZeHLZvHj2tBPPs6gwMRH3d20bMV5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\АНДРЕЙ\\source\\repos\\Phone_Book-main\\Phone_book\\Phone_Book.csproj",
+  "projectFilePath": "D:\\Repos\\Phone_Book\\Phone_Book.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\АНДРЕЙ\\.nuget\\packages\\fastmember\\1.5.0\\fastmember.1.5.0.nupkg.sha512",
     "C:\\Users\\АНДРЕЙ\\.nuget\\packages\\jquery\\3.7.1\\jquery.3.7.1.nupkg.sha512",
